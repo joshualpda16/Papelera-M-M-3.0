@@ -36,8 +36,14 @@ public class JfrPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnuArchivo = new javax.swing.JMenu();
+        mnuSalir = new javax.swing.JMenuItem();
+        mnuAyuda = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Papelera M&M 3.0");
+        setPreferredSize(new java.awt.Dimension(1024, 670));
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -47,8 +53,25 @@ public class JfrPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
+
+        mnuArchivo.setText("Archivo");
+
+        mnuSalir.setText("Salir");
+        mnuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuSalirActionPerformed(evt);
+            }
+        });
+        mnuArchivo.add(mnuSalir);
+
+        jMenuBar1.add(mnuArchivo);
+
+        mnuAyuda.setText("Ayuda");
+        jMenuBar1.add(mnuAyuda);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,6 +86,10 @@ public class JfrPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_mnuSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,5 +126,9 @@ public class JfrPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu mnuArchivo;
+    private javax.swing.JMenu mnuAyuda;
+    private javax.swing.JMenuItem mnuSalir;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,6 +12,7 @@ package generales;
 public class Singleton {
     
     private Singleton() {
+        
     }
     
     public static Singleton getInstance() {
@@ -19,7 +20,9 @@ public class Singleton {
     }
     
     private static class singletonHolder {
-
         private static final Singleton INSTANCE = new Singleton();
     }
+    
+    
+    
 }
