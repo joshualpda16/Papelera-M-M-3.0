@@ -15,8 +15,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        JfrPrincipal framePrincipal = new JfrPrincipal();
-        framePrincipal.run();
+        Singleton singl = Singleton.getInstance();
+        singl.showPrincipal();
     }
     
 }
