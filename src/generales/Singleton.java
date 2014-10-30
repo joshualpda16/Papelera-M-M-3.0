@@ -49,10 +49,10 @@ public class Singleton {
             framePrincipal.jDesktopPane1.add(frameConfiguracion);
         }
         if(frameConfiguracion.estado){
-            frameConfiguracion.show();
+            frameConfiguracion.hide();
             frameConfiguracion.estado=false;
         } else{
-            frameConfiguracion.hide();
+            frameConfiguracion.show();
             frameConfiguracion.estado=true;
         }
     }
